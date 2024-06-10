@@ -1,10 +1,11 @@
 ﻿using BookAPI.Data.Map;
 using BookAPI.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace BookAPI.Data
 {
-    public class BookCatalogDBContext : DbContext
+    public class BookCatalogDBContext : IdentityDbContext
     {
         public BookCatalogDBContext(DbContextOptions<BookCatalogDBContext> options) : base(options)
         {

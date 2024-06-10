@@ -8,10 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using BookAPI.Data;
 using BookAPI.Models;
 using BookAPI.Utils;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BookAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]"), Authorize]
     [ApiController]
     public class AuthorsController : ControllerBase
     {
